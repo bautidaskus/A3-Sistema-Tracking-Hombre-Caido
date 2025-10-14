@@ -1,0 +1,25 @@
+# Archivos temporales
+*.tmp
+*.temp
+*~
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Archivos compilados (si los hay)
+*.exe
+*.o
+*.obj
+
+# Extensiones de Cursor
+.cursor/
