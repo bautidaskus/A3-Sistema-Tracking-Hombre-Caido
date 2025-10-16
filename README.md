@@ -79,4 +79,5 @@ a3-hombre-caido/
 
 ## 📄 Licencia
 
-Este proyecto es parte del curso "Sistemas de Tiempo Real" - Universidad Nacional de Córdoba.
+Este proyecto es parte del curso "Sistemas de Tiempo Real" - Universidad Nacional de La Plata
+
