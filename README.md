@@ -81,4 +81,13 @@ a3-hombre-caido/
 - Frecuencia de muestreo: 100 Hz (MVP).  
 - Radio: 915 MHz, SF7, BW125 kHz (orientativo).
 
-Este proyecto es parte del curso “Sistemas de Tiempo Real” - UNLP.
+## 🔧 Requisitos
+
+- FreeRTOS
+- Hardware: IMU (acelerómetro), módulo LoRa
+- Frecuencia de muestreo: 100-200 Hz
+- Comunicación: LoRa 915MHz, SF7, BW125kHz
+
+## 📄 Licencia
+
+Este proyecto es parte del curso "Sistemas de Tiempo Real" - Universidad Nacional de La Plata
