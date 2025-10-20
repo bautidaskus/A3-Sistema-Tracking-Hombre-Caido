@@ -1,25 +1,50 @@
-# Archivos temporales
+# Archivos de Arduino IDE y compilación
+.ino.hex
+.ino.bin
+.ino.elf
+*.ino.hex
+*.ino.bin
+*.ino.elf
 *.tmp
-*.temp
-*~
+*.fcd
+*.lss
+*.eep
+*.sym
+*.map
+*.su
+*.suf
 
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de IDE
+# Directorios de Arduino IDE
+build/
+build-*/
+.pio/
 .vscode/
-.idea/
+.DS_Store
 *.swp
-*.swo
+*.bak
+*~
+.#*
+/AppData/
+/Arduino/
+/Arduino15/
 
-# Logs
+# Archivos de depuración y registro
 *.log
+*.err
+*.dmp
 
-# Archivos compilados (si los hay)
-*.exe
-*.o
-*.obj
+# Archivos de backup y temporales
+*~
+#*#
+.~*
+*.bak
+*.swp
+.DS_Store
 
-# Extensiones de Cursor
-.cursor/
+# Directorios de módulos/dependencias
+node_modules/
+venv/
+
+# Ignorar archivos específicos del sistema
+Thumbs.db
+Desktop.ini
