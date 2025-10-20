@@ -29,6 +29,7 @@ bool fall_detector_feed(const accel_raw_t* s, fall_event_t* out_event);
 
 ## alert_queue
 - Desacopla detector (productor) de radio TX (consumidor).
+- Implementada sobre `QueueHandle_t` cuando `APP_USE_FREERTOS=1`, con política de descartar el más antiguo si la cola está llena para no bloquear la tarea de detección.
 - API propuesta:
 ```
 void alert_queue_init(size_t capacity);

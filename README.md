@@ -65,6 +65,30 @@ a3-hombre-caido/
 3) App: crear tareas mínimas, prioridades y cola; medir latencia básica.  
 4) Receptor: `lora_rx` + `pkt_decode_alert` + mostrar alerta.
 
+## Hardware TTGO LoRa32 (ESP32 + SX1276)
+
+- Pines mapeados en `config/board_pins.h` (GPIO21/22 I2C, GPIO5/18/19/27 LoRa SPI, GPIO14 RST, GPIO26 DIO0, GPIO25 LED).  
+- Configuración global y modo FreeRTOS centralizados en `config/system_config.h`.
+- Drivers reales para MPU9250 (I2C) y SX1276 (SPI) viven en `firmware_node/src/drivers/`.
+
+### Proyecto ESP-IDF
+
+Nodo móvil:  
+```sh
+cd firmware_node/idf
+idf.py set-target esp32
+idf.py build flash monitor
+```
+
+Nodo receptor:  
+```sh
+cd firmware_rx/idf
+idf.py set-target esp32
+idf.py build flash monitor
+```
+
+> Necesario tener el entorno ESP-IDF configurado (`IDF_PATH`) y la antena LoRa conectada al conector IPEX antes de transmitir.
+
 ## Documentación
 
 - `docs/A3_Arquitectura_Capas.md`: diseño simplificado del MVP.  

@@ -18,10 +18,12 @@ Responsabilidad: acceso a hardware con tiempos acotados.
 - imu_accel
   - `bool imu_init(void);`
   - `bool imu_read(accel_raw_t* out);` // lectura cruda, O(us–ms)
+  - Implementación ESP-IDF: I2C @400 kHz sobre GPIO21/22 leyendo MPU9250 (ver `config/board_pins.h`).
 - lora_radio
   - `bool lora_init(uint32_t freq, uint8_t sf, uint8_t bw_khz, int8_t pwr_dbm, bool crc_on);`
   - `bool lora_tx(const uint8_t* buf, size_t len, uint32_t timeout_ms);`
   - `bool lora_rx(uint8_t* buf, size_t maxlen, uint32_t timeout_ms);`
+  - Implementación ESP-IDF: SPI 8 MHz (GPIO5/18/19/27) + RST=14, DIO0=26.
 
 Reglas: sin bloqueos indefinidos, sin `printf` en hot path, retornar `bool`/códigos.
 
@@ -103,4 +105,3 @@ Estados: INIT → RUN → ERROR(retry sencillo).
 - `config/fall_params.h`: umbrales y ventanas por defecto.
 - `config/radio_params.h`: freq, SF, BW, potencia, CRC, timeouts.
 - `FreeRTOSConfig.h`: stacks, prioridades, colas (cuando se integre RTOS).
-

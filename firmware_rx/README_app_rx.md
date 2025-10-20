@@ -3,8 +3,8 @@
 Objetivo: escuchar P2P, decodificar alertas y mostrarlas.
 
 ## Tareas (MVP)
-- `tsk_lora_rx` (ALTA): `lora_rx()` + `pkt_decode_alert()`.
-- `tsk_ui` (MEDIA/BAJA): imprimir/LED “ALERTA HOMBRE CAÍDO”.
+- `tsk_lora_rx` (ALTA): `lora_rx()` + `pkt_decode_alert()` (creada automáticamente en FreeRTOS).
+- `tsk_ui` (MEDIA/BAJA): imprime “ALERTA HOMBRE CAÍDO”; se puede extender a OLED/LED.
 
 ## Flujo
 1) Llega paquete → `pkt_decode_alert()` valida TYPE/VER y campos.
@@ -13,4 +13,3 @@ Objetivo: escuchar P2P, decodificar alertas y mostrarlas.
 ## Pruebas rápidas
 - Contar recibidos con CRC OK vs. errores.
 - Tasa de paquetes perdidos bajo SF7/BW125k.
-
